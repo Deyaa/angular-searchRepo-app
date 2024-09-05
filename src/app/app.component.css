@@ -1,0 +1,21 @@
+div {
+    box-sizing: border-box; /* The width and the height includes the padding and the border */
+    padding: 0 0 50px 0;
+    min-height: 100%;
+    position: relative;
+    text-align: left;
+    /*background-image: linear-gradient(white, blue);*/
+}
+
+header {
+    height: 150px;
+    line-height: 150px;
+}
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

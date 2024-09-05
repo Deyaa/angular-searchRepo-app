@@ -1,0 +1,19 @@
+<div class="container">
+<form [formGroup]="formdata" (ngSubmit)="submitForm()">
+
+    <div class="form-group">
+        <label for="search">Search:</label>
+        <input type="text" class="form-control" id="search" formControlName="search">
+        <div *ngIf="formdata?.get('search')?.invalid && formdata?.get('search')?.touched" class="text-danger">
+          Text search is required.
+        </div>
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<p> Textbox result is: {{searchString}} </p>
+<app-gallery-grid [galleryType]="galleryType" [searchString]="searchString"></app-gallery-grid>

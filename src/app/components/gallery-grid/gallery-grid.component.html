@@ -1,0 +1,19 @@
+<div class="container" [style.display]="isVisible ? 'block' : 'none'">
+    <form [formGroup]="formdata" (ngSubmit)="submitForm()" (keydown)="enterSubmit($event, formdata.form)">
+    
+        <div class="form-group">
+            <input type="text" class="form-control" id="search" formControlName="search" placeholder="Enter your search...">
+          </div>
+          <button type="submit">Submit</button>
+    </form>
+</div>
+
+<mat-grid-list cols="6" rowHeight="180px" >
+    <mat-grid-tile *ngFor="let tile of tiles" [style.border]="'1px ridge purple'">
+        <mat-grid-tile-header>
+            <h3>{{tile.repositoryName}}</h3>
+        </mat-grid-tile-header>
+        <app-thumbnail imageSource={{tile.avatarOwner}}></app-thumbnail>
+        <button class="btn btn-primary btn-sm" (click)="bookmarkItem(tile)" [style.display]="isBookmarkBtnVisible ? 'block' : 'none'">Bookmark Item</button>
+    </mat-grid-tile>
+</mat-grid-list>

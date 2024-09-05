@@ -1,0 +1,12 @@
+div {
+    margin: 3px;
+    padding: 3px;
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
